@@ -1,3 +1,5 @@
+#
+# Documentation mdadm http://www.ducea.com/2009/03/08/mdadm-cheat-sheet/
 export NVMe="/dev/nvme0n1 /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1"
 export CLICKHOUSEDATA="/datadisk/clickhouse"
 export CLICKHOUSELABEL="clickhouse-data"
