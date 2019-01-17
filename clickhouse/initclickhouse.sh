@@ -8,9 +8,13 @@ mdadm --monitor --daemonise /dev/md0
 mkfs.ext4 -G 4096 -F /dev/md0
 e2label /dev/md0 $CLICKHOUSELABEL
 
+service clickhouse-server stop
+
 mkdir -p $CLICKHOUSEDATA
 #Adding nofail: Si changemement de machine, les NVMe sont détruits et peuvent empecher de démarrer lle server
 grep $CLICKHOUSELABEL /etc/fstab || echo "LABEL=$CLICKHOUSELABEL $CLICKHOUSEDATA ext4 rw,noatime,discard,nobarrier,nofail,data=ordered 0 0" >> /etc/fstab
 mount  $CLICKHOUSEDATA
 
 chown clickhouse:clickhouse $CLICKHOUSEDATA
+
+service clickhouse-server start
