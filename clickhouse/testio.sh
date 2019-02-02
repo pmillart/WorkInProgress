@@ -37,5 +37,5 @@ rate_iops=12500
 [writer4]
 rw=randwrite
 directory=$CLICKHOUSEDATA
-rate_iops=12500" > ${CLICKHOUSEDATA}/readwrite.fio
+rate_iops=12500" >${CLICKHOUSEDATA}/readwrite.fio
 sudo fio --runtime 30 readwrite.fio
