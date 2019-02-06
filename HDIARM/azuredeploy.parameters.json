@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusterName": {
+            "value": "srhbase"
+        },
+        "clusterNamePrefix": {
+            "value": "srhbas"
+        },
+        "clusterLoginUserName": {
+            "value": "admin"
+        },
+        "clusterLoginPassword": {
+            "value": "ScaledRisk2011&"
+        },
+        "sshUserName": {
+            "value": "sshuser"
+        },
+        "sshPassword": {
+            "value": "ScaledRisk2011&"
+        },
+        "location": {
+            "value": "westeurope"
+        }
+    }
+}
